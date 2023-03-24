@@ -14,6 +14,9 @@ const UserdetailsSchema = new mongoose.Schema(
         type:String, required:true, unique:true
     }
 },
+{
+    collection : "userInfo"
+}
 );
 
 module.exports=mongoose.model("userInfo",UserdetailsSchema);

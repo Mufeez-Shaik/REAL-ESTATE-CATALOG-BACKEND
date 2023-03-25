@@ -1,29 +1,29 @@
 const mongoose=require('mongoose')
 
 const propertySchema=new mongoose.Schema({
-ppdId : string,
+ppdId :String,
+userId: String,
 propertyType:String,
 Price:Number,
 propertyAge:Number,
 Propertydescription:String,
  negotiable:Number,
  ownership : String,
- propertyApproved : string,
- bankLoan :string,
-
+ propertyApproved :String,
+ bankLoan :Number,
  length : Number,
  breath : Number,
  totalArea : Number,
- areaunit : string,
- bhk: string,
+ areaunit : Number,
+ bhk: Number,
  floor : Number,
- attached :string,
- westernToilet:string,
- furnished :string,
- carParking:string,
- lift :string,
- electricity :string,
- facing: string,git 
+ attached :String,
+ westernToilet:Number,
+ furnished :String,
+ carParking:Number,
+ lift :Number,
+ electricity :String,
+ facing: String
 
 })
 

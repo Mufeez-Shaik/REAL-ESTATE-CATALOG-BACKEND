@@ -1,7 +1,8 @@
 const mongoose=require('mongoose')
+const Property = require('../models/propDetails')
 
 const ownerSchema=new mongoose.Schema({
-    ppdid:{
+    commonId:{
         type:mongoose.Schema.Types.ObjectId,
         ref: 'Property'
     },

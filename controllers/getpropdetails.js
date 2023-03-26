@@ -9,10 +9,7 @@ module.exports={
     searchlist: async(req,res)=>{
         const ppdId=req.query.ppdId;
         console.log(ppdId);
-        const srchlist=await Owner.find().populate({
-            path: 'commonId',
-            match: {ppdId:ppdId}
-        });
+        const srchlist=await Owner.find({ppdId:ppdId}).populate('commonId');
         res.send(srchlist);
     }
 }

@@ -1,10 +1,11 @@
 const express = require('express');
 const router = new express.Router;
-const Property = require('../controllers/PrpertyControllers')
+const Property = require('../controllers/PrpertyControllers');
 
 
-router.post('/property/create',Property.create)
-router.post('/property/create2',Property.create2)
-// router.get('/property/get',Property.get)
+router.post('/property/basicinfo',Property.basicinfo);
+router.patch('/property/props',Property.props);
+router.post('/property/generalInfo',Property.generalInfo);
+router.patch('/property/locationInfo',Property.locationInfo);
 
-module.exports = router
+module.exports = router;

@@ -6,6 +6,10 @@ const connstr = "mongodb+srv://mufeez:zojFpzcqRhVC5YzA@cluster0.mt64wqa.mongodb.
 const anyroutes = require('./routes/route');
 const port = 8081;
 
+
+require("dotenv").config();
+const signup = require("./routes/user")
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
@@ -13,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
     useNewUrlParser:true,
     useUnifiedTopology:true
 }).then(()=>{console.log("connected")}).catch((e)=>{console.log(e.message)});
+
+app.use("/",signup)
 
 // app.use(require('./routes/route'));
 app.use(anyroutes)

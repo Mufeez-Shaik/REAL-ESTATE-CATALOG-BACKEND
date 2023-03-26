@@ -6,7 +6,6 @@ module.exports = {
     create: async(req,resp) =>{
         try{
 const {
-ppdId ,
 userId,
 propertyType ,
 Price ,
@@ -30,8 +29,9 @@ Propertydescription ,
  electricity,
  facing  
         } =req.body;
-
-            const property = await Property.create({ppdId ,
+console.log(req.body);
+            const property = await Property.create({
+                
                 userId,
                 propertyType ,
                 Price ,
@@ -70,6 +70,7 @@ Propertydescription ,
         try {const {
             
                 commonId,
+                ppdId ,
                 name,
                 mobil,
                 postedBy,
@@ -90,6 +91,7 @@ Propertydescription ,
             const property = await Owner.create({
 
                 commonId,
+                ppdId ,
                 name,
                 mobil,
                 postedBy,

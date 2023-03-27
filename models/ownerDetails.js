@@ -6,7 +6,16 @@ const ownerSchema=new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref: 'Property'
     },
-    ppdId :String,
+    status :{
+        type: String,
+        default: "Not sold"
+    },
+    daysLeft:Number,
+    action :String,
+    ppdId :{
+        type: String,
+        unique: true
+    },
     name:String,
     mobile:Number,
     postedBy:String,

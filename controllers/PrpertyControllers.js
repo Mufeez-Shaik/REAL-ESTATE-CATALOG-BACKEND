@@ -119,6 +119,36 @@ module.exports = {
     }
   },
 
+  prevBasicInfo: async (req, resp) => {
+    try {
+      
+       await Property.findByIdAndDelete(req.body._id);
+       
+
+      return resp.send(dataCleared);
+    } catch (e) {
+      return resp.send(e.message);
+      console.log(e.message);
+    }
+  },
+
+  prevGenInfo: async (req, resp) => {
+    try {
+      
+       await Owner.findByIdAndDelete(req.body._id);
+       
+
+      return resp.send(dataCleared);
+    } catch (e) {
+      return resp.send(e.message);
+      console.log(e.message);
+    }
+  },
+
+
+
+
+
   locationInfo: async (req, resp) => {
     try {
       const {

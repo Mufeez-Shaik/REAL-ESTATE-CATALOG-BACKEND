@@ -4,7 +4,7 @@ const bodyParser  = require('body-parser')
 const app = express();
 const connstr = "mongodb+srv://mufeez:zojFpzcqRhVC5YzA@cluster0.mt64wqa.mongodb.net/?retryWrites=true&w=majority"
 const anyroutes = require('./routes/route');
-const port = 8081;
+const port = 6000;
 
 
 require("dotenv").config();

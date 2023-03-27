@@ -2,6 +2,7 @@ const Property = require("../models/propDetails");
 const Owner = require("../models/ownerDetails");
 
 module.exports = {
+
   basicinfo: async (req, resp) => {
     try {
       const {

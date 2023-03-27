@@ -6,6 +6,7 @@ const ownerSchema=new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref: 'Property'
     },
+
     status :{
         type: String,
         default: "Not sold"
